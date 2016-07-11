@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Photot Gallery</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+    <center>
+
+      <section class="header">
+          <!-- event title, date, and General Assembly logo -->
+          <img src="../Bosco1/images/ga-horizontal.png" alt"ga_logo">
+          <br>
+          <h2>#AFestiveAssembly GA NYC Holiday Party 2015</h2>
+      </section>      
+      
+      <!-- assets from the event -->
+      <section>
+        <div class="math" data-ng-app="PhotoGallery">
+            <div class="clearfix" data-ng-controller="GalleryController">
+              <div class="pull-left" data-ng-repeat="pic in pho track by $index">
+                <!-- <img data-ng-src="{{pic.assets[0].urlTiny}}"> -->
+                <!-- <img data-ng-src="{{pic.assets[1].urlTiny}}"> -->
+                <!-- {{pic.assets[1].active}} -->
+                <!-- <span data-ng-show="pic.assets[0].active">
+                {{pic.assets[0].code}}
+                </span> 
+                <br>   -->             
+
+              <span data-ng-show="pic.assets[0].active">
+                <button type="button" data-toggle="modal" data-target="#myModal">
+                <img data-ng-src="{{pic.assets[0].urlTiny}}">
+                </button>
+              </span>
+
+              <span data-ng-show="pic.assets[1].active">
+                <button type="button" data-toggle="modal" data-target="#myModal">
+                <img data-ng-src="{{pic.assets[1].urlTiny}}">
+                </button>
+              </span>
+
+              
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- <span data-ng-show="pic.assets[1].active"></span> -->
+                      <h4 id="myModalLabel">{{pic.assets[0].code}}</h4>
+                      <div class="modal-body">
+                        <img data-ng-src="{{pic.assets[0].urlBig}}">
+                      </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>    
+      </section>
+      </center>
+        
+      <footer>
+        <!-- field to subscribe to General Assembly's newsletter -->
+        <img src="../Bosco1/images/ga-horizontal-white.png" alt"ga_logo">
+        <button type="button" class="btn btn-success">subscribe / newsletter</button>
+      </footer>
+        
+      <script src="js/main.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+        // $(function(){
+        //   // $('.pop').popover(function(){
+        //   //   $('img').trigger('click');
+        //   // });
+        //   $('[data-toggle="popover"]').popover();
+        // });
+      </script>
+  </div>
+  </body>
+</html> 
