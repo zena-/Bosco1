@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Photot Gallery</title>
+    <title>Photo Gallery</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +49,7 @@
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog">
                 <div class="modal-content">
-                    <!-- <span data-ng-show="pic.assets[1].active"></span> -->
+                    <span data-ng-show="pic.assets[0].active"></span>
                       <h4 id="myModalLabel">{{pic.assets[0].code}}</h4>
                       <div class="modal-body">
                         <img data-ng-src="{{pic.assets[0].urlBig}}">
@@ -69,7 +69,7 @@
       <footer>
         <!-- field to subscribe to General Assembly's newsletter -->
         <img src="../Bosco1/images/ga-horizontal-white.png" alt"ga_logo">
-        <button type="button" class="btn btn-success">subscribe / newsletter</button>
+        <a href="#"><button type="button" class="btn btn-success">subscribe / newsletter</button></a>
       </footer>
         
       <script src="js/main.js"></script>
