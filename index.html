@@ -17,7 +17,7 @@
           <!-- event title, date, and General Assembly logo -->
           <img src="../Bosco1/images/ga-horizontal.png" alt"ga_logo">
           <br>
-          <h2>#AFestiveAssembly GA NYC Holiday Party 2015</h2>
+          <STRONG><h2>#AFestiveAssembly GA NYC Holiday Party 2015</h2></STRONG>
       </section>      
       
       <!-- assets from the event -->
@@ -33,14 +33,16 @@
                 </span> 
                 <br>   -->             
 
-              <span data-ng-show="pic.assets[0].active">
-                <button type="button" data-toggle="modal" data-target="#myModal">
-                <img data-ng-src="{{pic.assets[0].urlTiny}}">
-                </button>
-              </span>
-
+              <div>
+                <span data-ng-show="pic.assets[0].active">
+                  <button type="button" data-toggle="modal" data-target="#myModal">
+                  <img data-ng-src="{{pic.assets[0].urlTiny}}">
+                  </button>
+                </span>
+              </div>
+              
               <span data-ng-show="pic.assets[1].active">
-                <button type="button" data-toggle="modal" data-target="#myModal">
+                <button type="button" data-toggle="modal" data-target="#myModall">
                 <img data-ng-src="{{pic.assets[1].urlTiny}}">
                 </button>
               </span>
