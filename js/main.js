@@ -30,7 +30,3 @@ app.service("galleryService", function($http, $q){
     })
     
 });
-
-// $('.pop').popover(function(){
-//     $('img').trigger('click');
-// });
